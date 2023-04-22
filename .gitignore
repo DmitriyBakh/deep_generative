@@ -3,3 +3,6 @@ __pycache__
 .vscode
 *.tar.gz
 data
+*.zip
+img_align_celeba
+*.jpg
