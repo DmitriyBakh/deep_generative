@@ -6,3 +6,4 @@ data
 *.zip
 img_align_celeba
 *.jpg
+MNIST
