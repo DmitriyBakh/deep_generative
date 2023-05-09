@@ -1,10 +1,10 @@
-#QuantGANs for Financial Time Series Generation
+# QuantGANs for Financial Time Series Generation
 This repository contains an implementation of Quantitative Generative Adversarial Networks (QuantGANs) for generating synthetic financial time series data. The model is built using the PyTorch framework and consists of a generator and a discriminator. Both the generator and the discriminator use Temporal Block layers for temporal data processing.
 
-##Temporal Block
+## Temporal Block
 A Temporal Block is a custom layer designed to handle time series data effectively. It consists of two 1D convolutional layers, each followed by a PReLU activation and dropout. The output from the second layer is added to the original input to form a residual connection. The final output is then passed through a PReLU activation.
 
-##Training the Model
+## Training the Model
 To train the QuantGANs model, follow these steps:
 
 1. Prepare the financial data by downloading a historical stock prices CSV file from Yahoo Finance. In this example, we use the adjusted closing prices of the Apple Inc. (AAPL) stock.
@@ -12,7 +12,7 @@ To train the QuantGANs model, follow these steps:
 3. Initialize the generator and the discriminator.
 4. Train the QuantGANs model using the train_quant_gans function with the loaded data, generator, and discriminator.
 
-##Using the Model in a Jupyter Notebook
+## Using the Model in a Jupyter Notebook
 You can use the QuantGANs model in a Jupyter Notebook by importing the necessary classes and functions from the provided code. Follow these steps:
 
 1. Import the required classes and functions from the provided code.
@@ -21,7 +21,7 @@ You can use the QuantGANs model in a Jupyter Notebook by importing the necessary
 4. Train the QuantGANs model using the train_quant_gans function.
 5. After training, you can use the generator to create synthetic financial time series data by providing random noise as input.
 
-##Getting Stock Data from Yahoo Finance
+## Getting Stock Data from Yahoo Finance
 To download historical stock prices from Yahoo Finance:
 
 1. Go to Yahoo Finance.
@@ -30,7 +30,7 @@ To download historical stock prices from Yahoo Finance:
 4. Adjust the time period and frequency as desired, then click on "Apply".
 5. Click on the "Download" button to download the stock data as a CSV file.
 
-##Example
+## Example
 Here's a quick example of how to use the QuantGANs model in a Jupyter Notebook:
 
 ```python
@@ -53,7 +53,7 @@ noise = torch.randn(batch_size, 1, 100).to(device)
 generated_data = generator(noise)
 ```
 
-##Visualizing Generated Time Series Data
+## Visualizing Generated Time Series Data
 After generating synthetic financial time series data using the trained QuantGANs model, you can visualize the data using Python libraries like Matplotlib or Plotly. Here's an example using Matplotlib:
 
 ```python
