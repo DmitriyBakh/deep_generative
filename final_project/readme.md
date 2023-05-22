@@ -127,7 +127,9 @@ ax.plot(np.cumsum(y[0:30], axis=1).T)
 ax.set_title('30 generated log graphs'.format(len(y)))
 ax.set_xlabel('days')
 ax.set_ylabel('Cumalative log');
+```
 
+```python
 windows = [1, 5, 20, 100]
 
 fig, axs = plt.subplots(nrows=2, ncols=2, figsize=(20, 10))
@@ -148,18 +150,4 @@ for i in range(len(windows)):
 
 axs[0,0].legend(['Historical', 'Synthetic'])
 plt.show()
-```
-
-```python
-##Saving and Loading Trained Models
-You can save the trained generator and discriminator models to disk for later use. To do this, you can use the torch.save function. Here's an example:
-
-# Save the trained generator and discriminator models
-torch.save(generator.state_dict(), 'generator.pth')
-torch.save(discriminator.state_dict(), 'discriminator.pth')
-
-#To load the saved models back into memory, use the torch.load function:
-# Load the saved generator and discriminator models
-generator.load_state_dict(torch.load('generator.pth'))
-discriminator.load_state_dict(torch.load('discriminator.pth'))
 ```
